@@ -7,7 +7,7 @@
 		<title>Pushman</title>
 
 		<!-- Bootstrap CSS -->
-		<link href="http://pushman.dfl.mn/css/all.css" rel="stylesheet">
+		<link href="http://live.pushman.dfl.mn/css/all.css" rel="stylesheet">
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -27,7 +27,7 @@
 		@show
 
 		@section('javascript')
-			<script src="http://pushman.dfl.mn/js/all.js"></script>
+			<script src="http://live.pushman.dfl.mn/js/all.js"></script>
 		@show
 	</body>
 </html>

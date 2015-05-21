@@ -257,7 +257,7 @@ function connect() {
 
 	// This token changes every 60 minutes automatically.
 	// We use Serverside helpers so we never have to change the code.
-	conn = new ab.Session('ws://pushman.dfl.mn:8080?token=zjVHWGbiI2fQjo1A2AQK',
+	conn = new ab.Session('ws://live.pushman.dfl.mn:8080?token=zjVHWGbiI2fQjo1A2AQK',
 		function() {
 			divLog('Connected to Pushman via Web Socket.');
 			conn.subscribe('restart_warning', function(topic, data) {

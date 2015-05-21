@@ -6,28 +6,28 @@
 		<div class="container bottom40 tophat">
 			<div class="row bottom40">
 				<div class="col-lg-12">
-					<img src="http://pushman.dfl.mn/img/logo.png" class="logo" alt="Pushman Logo">
+					<img src="http://live.pushman.dfl.mn/img/logo.png" class="logo" alt="Pushman Logo">
 					<h1>Pushman</h1>
 				</div>
 			</div>
 
 			<div class="row bottom40">
 				<div class="col-lg-4">
-					<img class="home-icon" src="http://pushman.dfl.mn/img/simple.png" alt="Simple">
+					<img class="home-icon" src="http://live.pushman.dfl.mn/img/simple.png" alt="Simple">
 					<div class="text">
 						<h4>Simple</h4>
 						<p>Build new events in seconds</p>
 					</div>
 				</div>
 				<div class="col-lg-4">
-					<img class="home-icon" src="http://pushman.dfl.mn/img/secure.png" alt="Secure">
+					<img class="home-icon" src="http://live.pushman.dfl.mn/img/secure.png" alt="Secure">
 					<div class="text">
 						<h4>Secure</h4>
 						<p>Open source at <a href="http://github.com/duffleman/pushman">GitHub</a></p>
 					</div>
 				</div>
 				<div class="col-lg-4">
-					<img class="home-icon" src="http://pushman.dfl.mn/img/ready.png" alt="Ready">
+					<img class="home-icon" src="http://live.pushman.dfl.mn/img/ready.png" alt="Ready">
 					<div class="text">
 						<h4>Ready</h4>
 						<p>Feature rich</p>

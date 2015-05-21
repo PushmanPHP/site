@@ -129,7 +129,7 @@
 
 				<p>The client never pinged the server and asked for the event! The server pushed it down using a Web Socket!</p>
 
-				<p>You can also setup your own HTTP POST request to test this. Send a HTTP POST request to <code>http://pushman.dfl.mn/api/push</code> with some POST headers (as shown below) and watch as the Output Log picks it up.</p>
+				<p>You can also setup your own HTTP POST request to test this. Send a HTTP POST request to <code>http://live.pushman.dfl.mn/api/push</code> with some POST headers (as shown below) and watch as the Output Log picks it up.</p>
 				<p>Use the private key: <code>this_is_a_60_char_string_that_looks_like_a_valid_private_key</code>.</p>
 				<p><a href="/documentation">Check out the Documentation</a> on the fields required to push your own POST request.</p>
 			</div>
@@ -138,7 +138,7 @@
 		<div class="row bottom40">
 			<div class="col-lg-12">
 				<h5>Got cURL? Paste this into your Console</h5>
-				<pre><code class="bash">curl -X POST -F "private=this_is_a_60_char_string_that_looks_like_a_valid_private_key" -F "event=kittens_are_cute" http://pushman.dfl.mn/api/push</code></pre>
+				<pre><code class="bash">curl -X POST -F "private=this_is_a_60_char_string_that_looks_like_a_valid_private_key" -F "event=kittens_are_cute" http://live.pushman.dfl.mn/api/push</code></pre>
 			</div>
 		</div>
 
@@ -188,7 +188,7 @@ $(document).ready(function() {
 		var private_key = 'this_is_a_60_char_string_that_looks_like_a_valid_private_key';
 
 		// Emulates you pushing an event to us via a HTTP POST request.
-		$.post('/api/push', { channel: channel, event: event, payload: payload, private: private_key}, function(data) {
+		$.post('http://live.pushman.dfl.mn/api/push', { channel: channel, event: event, payload: payload, private: private_key}, function(data) {
 			// It auto parses the JSON into an object. Lets turn it back into a string here.
 			var str = JSON.stringify(data, null, 2);
 			// Put it into the response div box.

@@ -17,6 +17,13 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 about_font">
+				<h5>What is it?</h5>
+				<p>You install it on a server as it's own application, you then build any site you want with whatever technology you want, and push events to Pushman that will push it down to your connected clients via a WebSocket connection.</p>
+				
+				<div style="width:380px;margin-left:auto;margin-right:auto;">
+					<img src="http://i.imgur.com/5Bjhi6G.png" alt="What is it?" class="img-responsive">
+				</div>
+
 				<h5>Whats wrong with AJAX?</h5>
 				<p>Currently with AJAX technology, viewers on your site initiate a connection after the page has loaded to get additional resources. Maybe you use this to make prettier loading screens, or maybe to navigate the site without refreshing the entire site.</p>
 				<p>But there is a problem, the client must initiate the connection. And must ping your server once every few seconds to grab new resources or check the progress on something.</p>

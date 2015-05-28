@@ -260,6 +260,136 @@ Cache-Control: no-cache
 
 		<div class="row">
 			<div class="col-lg-12">
+				<h3>Build Channel(s)</h3>
+				<span class="label label-danger">AUTH</span> <span class="label label-info">POST</span> :: /api/channel
+				<p>This method builds a set of channels or single channel.</p>
+
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>Parameter</th>
+							<th>Required</th>
+							<th>Requirements</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>private</td>
+							<td><span class="label label-success">yes</span></td>
+							<td>It must be a valid private key, exactly 60 characters.</td>
+							<td>The private key of a site you manage.</td>
+						</tr>
+						<tr>
+							<td>channel</td>
+							<td><span class="label label-success">yes</span></td>
+							<td>It must set of channel names or name, minimum 3 characters.</td>
+							<td>A single string or JSON string representing an array.</td>
+						</tr>
+						<tr>
+							<td>max</td>
+							<td><span class="label label-danger">no</span></td>
+							<td>Must be between 1 and the max defined.</td>
+							<td>The maximum amount of concurrent connections to the channel.</td>
+						</tr>
+						<tr>
+							<td>refreshes</td>
+							<td><span class="label label-danger">no</span></td>
+							<td>Must be 'yes', or 'no'.</td>
+							<td>Should the channels public token refresh every 60 minutes?</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="row">
+					<div class="col-lg-6">
+						<h5>Request</h5>
+<pre><code class="json">POST /api/channel HTTP/1.1
+Host: localhost
+Cache-Control: no-cache
+{
+    "private": "gIcLWblryEvOqplqVpCwNmXZGPjzAYKyNAUtcuuzfNk..."
+    "channel": "my_channel"
+}
+</code></pre>
+					</div>
+					<div class="col-lg-6">
+						<h5>Response</h5>
+<pre><code class="javascript">[
+    {
+        "name": "my_channel",
+        "refreshes": "no",
+        "max_connections": 3,
+        "public": "wXLaUAAEhSfl3TMP3JCK",
+        "created_at": "2015-05-28 15:07:26",
+        "id": 31
+    }
+]
+</code></pre>
+					</div>
+				</div>
+			</div>
+		</div>
+
+				<div class="row">
+			<div class="col-lg-12">
+				<h3>Destroy Channel(s)</h3>
+				<span class="label label-danger">AUTH</span> <span class="label label-warning">DELETE</span> :: /api/channel
+				<p>This method destroys a set of channels or single channel.</p>
+
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>Parameter</th>
+							<th>Required</th>
+							<th>Requirements</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>private</td>
+							<td><span class="label label-success">yes</span></td>
+							<td>It must be a valid private key, exactly 60 characters.</td>
+							<td>The private key of a site you manage.</td>
+						</tr>
+						<tr>
+							<td>channel</td>
+							<td><span class="label label-success">yes</span></td>
+							<td>It must set of channel names or name, minimum 3 characters.</td>
+							<td>A single string or JSON string representing an array.</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="row">
+					<div class="col-lg-6">
+						<h5>Request</h5>
+<pre><code class="json">DELETE /api/channel HTTP/1.1
+Host: localhost
+Cache-Control: no-cache
+{
+    "private": "gIcLWblryEvOqplqVpCwNmXZGPjzAYKyNAUtcuuzfNk..."
+    "channel": "my_channel"
+}
+</code></pre>
+					</div>
+					<div class="col-lg-6">
+						<h5>Response</h5>
+<pre><code class="javascript">{
+    "status": "success",
+    "message": "",
+    "deleted": "my_channel",
+    "failed_on": ""
+}
+</code></pre>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-12">
 				<hr>
 			</div>
 		</div>

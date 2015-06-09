@@ -1,4 +1,6 @@
-<?php namespace app\Http\Controllers;
+<?php
+
+namespace app\Http\Controllers;
 
 class WelcomeController extends Controller
 {
@@ -10,12 +12,14 @@ class WelcomeController extends Controller
     public function index()
     {
         $className = 'nav-home';
+
         return view('welcome', compact('className'));
     }
 
     public function about()
     {
         $className = 'nav-home';
+
         return view('about', compact('className'));
     }
 }

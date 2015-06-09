@@ -316,7 +316,7 @@ Cache-Control: no-cache
 Host: localhost
 Cache-Control: no-cache
 {
-    "private": "gIcLWblryEvOqplqVpCwNmXZGPjzAYKyNAUtcuuzfNk..."
+    "private": "gIcLWblryEvOqplqVpCwNmXZGPjzAYKyNAUtcuuzfNk...",
     "channel": "my_channel"
 }
 </code></pre>
@@ -377,7 +377,7 @@ Cache-Control: no-cache
 Host: localhost
 Cache-Control: no-cache
 {
-    "private": "gIcLWblryEvOqplqVpCwNmXZGPjzAYKyNAUtcuuzfNk..."
+    "private": "gIcLWblryEvOqplqVpCwNmXZGPjzAYKyNAUtcuuzfNk...",
     "channel": "my_channel"
 }
 </code></pre>

@@ -18,6 +18,14 @@
 				<div class="well">
 					<ul>
 						<li><a href="#apiEndpoints">API Endpoints</a></li>
+                        <ul>
+                            <li><a href="#pushEvent">Push Event</a></li>
+                            <li><a href="#chanListing">Channel Listing</a></li>
+                            <li><a href="#chanInfo">Channel Information</a></li>
+                            <li><a href="#buildChan">Build Channels</a></li>
+                            <li><a href="#remChannel">Destroy Channels</a></li>
+                            <li><a href="#sublisting">Subscriber Listing</a></li>
+                        </ul>
 						<li><a href="#siteUsage">Using the Site</a></li>
 						<li><a href="#exampleClient">Example Client (Javascript)</a></li>
 						<li><a href="#laravel">Laravel Extenders</a></li>
@@ -32,7 +40,7 @@
 			</div>
 		</div>
 
-		<div class="row">
+		<div class="row" id="pushEvent">
 			<div class="col-lg-12">
 				<h3>Push Event</h3>
 				<span class="label label-danger">AUTH</span> <span class="label label-info">POST</span> :: /api/push
@@ -126,7 +134,7 @@ Content-Type: multipart/form-data;
 			</div>
 		</div>
 
-		<div class="row">
+		<div class="row" id="chanListing">
 			<div class="col-lg-12">
 				<h3>Channel Listing</h3>
 				<span class="label label-danger">AUTH</span> <span class="label label-success">GET</span> :: /api/channels
@@ -192,7 +200,7 @@ Cache-Control: no-cache
 			</div>
 		</div>
 
-		<div class="row">
+		<div class="row" id="chanInfo">
 			<div class="col-lg-12">
 				<h3>Channel Information</h3>
 				<span class="label label-danger">AUTH</span> <span class="label label-success">GET</span> :: /api/channel
@@ -258,7 +266,7 @@ Cache-Control: no-cache
 			</div>
 		</div>
 
-		<div class="row">
+		<div class="row" id="buildChan">
 			<div class="col-lg-12">
 				<h3>Build Channel(s)</h3>
 				<span class="label label-danger">AUTH</span> <span class="label label-info">POST</span> :: /api/channel
@@ -331,7 +339,7 @@ Cache-Control: no-cache
 			</div>
 		</div>
 
-				<div class="row">
+		<div class="row" id="remChannel">
 			<div class="col-lg-12">
 				<h3>Destroy Channel(s)</h3>
 				<span class="label label-danger">AUTH</span> <span class="label label-warning">DELETE</span> :: /api/channel
@@ -387,6 +395,85 @@ Cache-Control: no-cache
 				</div>
 			</div>
 		</div>
+
+        <div class="row" id="sublisting">
+            <div class="col-lg-12">
+                <h3>Subscriber Listing</h3>
+                <span class="label label-danger">AUTH</span> <span class="label label-success">GET</span> :: /api/subscribers
+                <p>This method returns a list of all subscribers listening to a specific channel on a site, along with their IP and userdata.</p>
+
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Required</th>
+                            <th>Requirements</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>private</td>
+                            <td><span class="label label-success">yes</span></td>
+                            <td>It must be a valid private key from one of your sites, exactly 60 characters.</td>
+                            <td>The private key of a site you manage.</td>
+                        </tr>
+                        <tr>
+                            <td>channel</td>
+                            <td><span class="label label-success">yes</span></td>
+                            <td>It must be a channel name, minimum 3 characters.</td>
+                            <td>A single string.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h5>Request</h5>
+<pre><code class="json">GET /api/subscribers HTTP/1.1
+Host: localhost
+Cache-Control: no-cache
+{
+    "private": "gIcLWblryEvOqplqVpCwNmXZGPjzAYKyNAUtcuuzfNk...",
+    "channel": "public"
+}
+</code></pre>
+                    </div>
+                    <div class="col-lg-6">
+                        <h5>Response</h5>
+<pre><code class="javascript">{
+    "375": {
+        "resource_id": "375",
+        "ip": "127.0.0.1",
+        "created_at": "2015-06-09 21:12:33",
+        "userdata": {
+            "token": "paFHMctnkPnrRyNA2588",
+            "user_Id": 235
+        },
+        "events": [
+            "public",
+            "kittens"
+        ]
+    },
+    "478": {
+        "resource_id": "478",
+        "ip": "127.0.0.1",
+        "created_at": "2015-06-09 21:12:34",
+        "userdata": {
+            "token": "paFHMctnkPnrRyNA2588",
+            "someData": "true"
+        },
+        "events": [
+            "public",
+            "kittens"
+        ]
+    }
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 		<div class="row">
 			<div class="col-lg-12">

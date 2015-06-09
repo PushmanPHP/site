@@ -1,9 +1,9 @@
-<?php namespace App\Http\Controllers;
+<?php namespace app\Http\Controllers;
 
 use Pushman\PHPLib\Pushman;
 
-class DemoController extends Controller {
-
+class DemoController extends Controller
+{
     public function index()
     {
         $className = 'nav-home';

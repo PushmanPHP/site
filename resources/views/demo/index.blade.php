@@ -47,7 +47,7 @@
 
 				<div class="row">
 					<div class="col-lg-4">
-						<a id="btnConnect" href="#" class="btn btn-block btn-success btn-xs">Connect</a>	
+						<a id="btnConnect" href="#" class="btn btn-block btn-success btn-xs">Connect</a>
 					</div>
 					<div class="col-lg-4">
 						<a id="btnDisconnect" href="#" class="btn btn-block btn-danger btn-xs">Disconnect</a>
@@ -157,7 +157,7 @@
 <script>
 /*
  * Howdy! You should read this to see how the demo works.
- * Don't be afraid to ping me on Twitter @Duffleman 
+ * Don't be afraid to ping me on Twitter @Duffleman
  *
  */
 
@@ -306,7 +306,7 @@ function checkConnection()
 // This function just warns about restarts.
 // Better let people know when it intentionally restarts
 // dont want people thinking its unreliable!
-// 
+//
 // Would be way cooler if this was a normal warn() method that took arguments in though.
 function warnUserAboutRestart()
 {

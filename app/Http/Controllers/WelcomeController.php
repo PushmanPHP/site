@@ -1,7 +1,7 @@
-<?php namespace App\Http\Controllers;
+<?php namespace app\Http\Controllers;
 
-class WelcomeController extends Controller {
-
+class WelcomeController extends Controller
+{
     /**
      * Show the application welcome screen to the user.
      *

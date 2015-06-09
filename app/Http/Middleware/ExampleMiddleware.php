@@ -1,9 +1,9 @@
-<?php namespace App\Http\Middleware;
+<?php namespace app\Http\Middleware;
 
 use Closure;
 
-class ExampleMiddleware {
-
+class ExampleMiddleware
+{
     /**
      * Handle an incoming request.
      *
@@ -15,5 +15,4 @@ class ExampleMiddleware {
     {
         return $next($request);
     }
-
 }
